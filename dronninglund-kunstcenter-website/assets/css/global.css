@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --primary-black: #060606;
+  --primary-white: #faf9f6;
+
+  --secondary-main: #1f9586;
+
+  --neutral-1: #1a1a1a;
+  --neutral-2: #374151;
+  --neutral-3: #6b7280;
+  --neutral-4: #e5e7eb;
+  --neutral-5: #f8fafc;
+  --neutral-6: #ffffff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 300;
+}
+
+button,
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
