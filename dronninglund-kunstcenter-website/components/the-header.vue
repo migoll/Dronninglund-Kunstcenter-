@@ -8,6 +8,7 @@
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/udstilling-eksempel">Udstilling Eksempel</a></li>
+            <li><a href="/begivenhed-eksempel">test</a></li>
           </ul>
         </nav>
       </div>

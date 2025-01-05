@@ -2,8 +2,8 @@
 <main>
   <section>
     <div class="udstilling-landing-page">
-  <p>01-09-2024  -  03-11-2024</p>
-  <h1>KUNSTHÅNDVÆRK.NU 2024</h1>
+  <p>23343  -  34342</p>
+  <h1>hej</h1>
   <img src="/images/dk-sllide7.jpg" alt="">
     </div>
   </section>
