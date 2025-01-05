@@ -6,10 +6,16 @@
         <p>9330 DRONNINGLUND</p>
         <p>TLF. 9647 6600</p>
         <div class="social-icons">
-          <!-- <img src="@/assets/icons/facebook-icon.svg" alt="Facebook" /> -->
-          <!-- <img src="@/assets/icons/instagram-icon.svg" alt="Instagram" /> -->
-          <p>FB</p>
-          <p>FB</p>
+          <img
+            class="search-icon"
+            src="~assets/icons/instagram-brands-solid.svg"
+            alt=""
+          />
+          <img
+            class="search-icon"
+            src="~assets/icons/square-facebook-brands-solid.svg"
+            alt=""
+          />
         </div>
       </div>
 
@@ -60,8 +66,8 @@
 }
 
 .social-icons img {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
 }
 
 .footer-logo {
