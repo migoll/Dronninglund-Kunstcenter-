@@ -61,6 +61,7 @@
   align-items: center;
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .footer-info {
@@ -99,5 +100,27 @@
   cursor: pointer;
   font-size: 1rem;
   width: stretch;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-top: 1rem;
+  }
+
+  .footer-login {
+    margin-top: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
 </style>

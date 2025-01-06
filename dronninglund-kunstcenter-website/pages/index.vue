@@ -165,7 +165,7 @@
 .forside-nyhedsbrev {
   background-color: var(--primary-black);
   color: var(--primary-white);
-  padding-block: 16px;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
