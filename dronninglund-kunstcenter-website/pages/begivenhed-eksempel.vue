@@ -119,6 +119,7 @@ export default {
 
   .acf-description {
     line-height: 1.5;
+    font-size: 1rem;
   }
 
   .medvirkende {
