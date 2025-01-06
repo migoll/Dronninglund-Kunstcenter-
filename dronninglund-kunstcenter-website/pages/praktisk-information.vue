@@ -46,15 +46,66 @@
     </p>
     <button class="reverse-button-black">Se busplan</button>
   </section>
-  <section class="center-section accordion-section">
+  <section class="accordion-section center-section">
     <div class="accordion">
-      <div class="accordion-header" @click="toggleAccordion">
-        <h3>Bestyrelsen</h3>
+      <div class="accordion-header" @click="toggleAccordion1">
+        <h3>Venneforening</h3>
         <button class="accordion-toggle">
-          {{ isAccordionOpen ? "▲" : "▼" }}
+          {{ isAccordionOpen1 ? "▲" : "▼" }}
         </button>
       </div>
-      <div class="accordion-content" v-show="isAccordionOpen">
+      <div class="accordion-content" v-show="isAccordionOpen1">
+        <p>
+          Foreningen, som blev stiftet i 2001, har udelukkende til formål at
+          fremme Dronninglund Kunstcenter, og vi arbejder på gennem
+          arrangementer og aktiviteter at udbrede interessen for, samt gennem
+          donationer, at støtte Dronninglund Kunstcenter.
+        </p>
+        <p>
+          Venneforeningen indgår i et arrangementsudvalg, som planlægger og
+          arrangerer koncerter, foredrag og diverse andre aktiviteter.
+        </p>
+        <p>
+          Venneforeningen arrangerer desuden kunst-/kulturrejser til særpris for
+          medlemmerne.
+        </p>
+        <h4>Bliv medlem af Dronninglund Kunstcenters Venner</h4>
+        <ul>
+          <li>
+            Et elektronisk medlemskort i kasseapparatet, når du oplyser dit
+            telefonnummer.
+          </li>
+          <li>Ubegrænset adgang til kunstcentrets udstillinger.</li>
+          <li>
+            Invitation til alle kunstcentrets udstillinger og ferniseringer.
+          </li>
+          <li>
+            "Venne-INFO" pr. mail med information om kunstcentrets udstillinger
+            og øvrige aktiviteter.
+          </li>
+          <li>Reduceret entrépris ved nogle specielle arrangementer.</li>
+          <li>Et årskontingent koster 275 kr.</li>
+          <li>
+            Har du ikke selv en mailadresse, kan du anføre en vens eller et
+            familiemedlems mailadresse og på den måde blive orienteret.
+          </li>
+          <li>
+            BEMÆRK - at "Venne-INFO" og NYHEDSBREV fra Kunstcentret er to
+            forskellige info-kilder!
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- accordion inspiration https://duaneblake.co.uk/front-end/converting-bootstraps-accordions-to-a-vue-js-component/-->
+    <div class="accordion">
+      <div class="accordion-header" @click="toggleAccordion2">
+        <h3>Bestyrelsen</h3>
+        <button class="accordion-toggle">
+          {{ isAccordionOpen2 ? "▲" : "▼" }}
+        </button>
+      </div>
+      <div class="accordion-content" v-show="isAccordionOpen2">
         <ul>
           <li>
             <strong>Christian Christensen</strong> - Formand<br />Tlf: 40316891
@@ -76,10 +127,18 @@
 <script setup>
 import { ref } from "vue";
 
-const isAccordionOpen = ref(false);
+// Variabler der holder styr på om en accordion er åben eller lukket
+const isAccordionOpen1 = ref(false);
+const isAccordionOpen2 = ref(false);
 
-const toggleAccordion = () => {
-  isAccordionOpen.value = !isAccordionOpen.value;
+// Funktion der toggler om en accordion er åben eller ej baseret på dens value - første accordion
+const toggleAccordion1 = () => {
+  isAccordionOpen1.value = !isAccordionOpen1.value;
+};
+
+// Funktion der toggler om en accordion er åben eller ej baseret på dens value - anden accordion
+const toggleAccordion2 = () => {
+  isAccordionOpen2.value = !isAccordionOpen2.value;
 };
 </script>
 
@@ -92,33 +151,34 @@ const toggleAccordion = () => {
 }
 
 .accordion {
-  border: 3px solid black;
+  border: 3px solid var(--primary-black);
   border-radius: 6px;
   overflow: hidden;
-  max-width: 1;
+  max-width: 100%;
+  margin-bottom: 2rem;
 }
 
 .accordion-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  color: white;
-  padding: 0.5rem 1rem;
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  padding: 0 1rem;
   cursor: pointer;
 }
 
 .accordion-toggle {
   background: none;
   border: none;
-  color: white;
+  color: var(--primary-white);
   font-size: 16px;
   cursor: pointer;
 }
 
 .accordion-content {
   padding: 1rem;
-  background-color: white;
+  background-color: var(--primary-white);
 }
 
 .accordion-content ul {
@@ -134,7 +194,7 @@ const toggleAccordion = () => {
 .accordion-link {
   display: block;
   margin-top: 1rem;
-  color: black;
+  color: var(--primary-black);
   text-decoration: underline;
   cursor: pointer;
 }

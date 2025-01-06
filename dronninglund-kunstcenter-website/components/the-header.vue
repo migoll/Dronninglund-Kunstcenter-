@@ -251,7 +251,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .top-burger {
     display: none;
   }
