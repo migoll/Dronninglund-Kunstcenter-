@@ -1,5 +1,5 @@
 <template>
-    <header class="header">
+  <header class="header">
     <div class="top-section">
       <div class="search">
         <h2>Search icon</h2>
@@ -36,12 +36,90 @@
   
   <script setup>
   </script>
-  
-  <style scoped>
-  header {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-  }
-  </style>
-  
+
+<style scoped>
+.header {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: center;
+}
+
+.search img {
+  width: 20px;
+  height: 20px;
+  justify-self: start;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  margin: 0 auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-self: end;
+}
+
+.language-button,
+.ticket-button {
+  background-color: var(--primary-white);
+  color: var(--primary-black);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.divider-hr {
+  height: 1px;
+  background-color: var(--primary-white);
+  opacity: 0.2;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav-list-left,
+.nav-list-right {
+  display: flex;
+  gap: 20px;
+}
+
+.divider-vr {
+  width: 1px;
+  height: 35px;
+  background-color: var(--primary-white);
+  opacity: 0.5;
+  margin: 0 20px;
+}
+
+.nav-list-left a,
+.nav-list-right a {
+  color: var(--primary-white);
+  text-decoration: none;
+  font-size: 16px;
+}
+</style>
