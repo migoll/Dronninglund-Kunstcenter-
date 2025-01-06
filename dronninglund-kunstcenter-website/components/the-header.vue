@@ -133,6 +133,11 @@
   font-size: 1rem;
 }
 
+.ticket-button {
+  background-color: var(--secondary-main);
+  color: var(--primary-white);
+}
+
 .burger-menu-wrapper {
   display: none;
   position: absolute;
