@@ -13,8 +13,10 @@
         </ul>
       </div>
       <div class="åbningstider-buttons">
-        <button class="ticket-button">Køb Billet</button>
-        <button class="language-button">Få mere information</button>
+        <NuxtLink to="/billetter" class="ticket-button">Køb Billet</NuxtLink>
+        <NuxtLink to="/praktisk-information" class="language-button"
+          >Få mere information</NuxtLink
+        >
       </div>
     </div>
   </div>
@@ -137,6 +139,10 @@
   color: var(--primary-white);
   display: flex;
   flex-direction: row;
+  padding-block: 2rem;
+}
+.om-os h2 {
+  margin-block: 0;
 }
 
 .om-os-container {
@@ -215,7 +221,7 @@
 .forside-nyhedsbrev {
   background-color: var(--primary-black);
   color: var(--primary-white);
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,10 +256,14 @@
   background-color: black;
   color: white;
   width: 50%;
-  margin-left: 50vw;
+  align-self: end;
   margin-top: -88px;
   z-index: 999;
+  position: absolute;
+  right: 0;
+  left: auto;
 }
+
 .åbningstider-box li {
   font-weight: bold;
   list-style-type: none;
@@ -277,6 +287,8 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
 }
 
 .ticket-button {
@@ -290,7 +302,6 @@
   padding: 1rem;
   position: absolute;
   z-index: 999;
-  padding: 1rem;
 }
 
 .åbningstider-buttons {
