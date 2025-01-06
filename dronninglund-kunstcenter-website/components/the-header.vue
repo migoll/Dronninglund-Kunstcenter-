@@ -1,18 +1,37 @@
 <template>
-    <header>
-      <div class="header-container">
-        <h1 class="logo">Dronninglund Kunstcenter</h1>
-        <nav class="nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/udstilling-eksempel">Udstilling Eksempel</a></li>
-            <li><a href="/begivenhed-eksempel">test</a></li>
-          </ul>
-        </nav>
+    <header class="header">
+    <div class="top-section">
+      <div class="search">
+        <h2>Search icon</h2>
       </div>
-    </header>
+      <div class="logo">
+        <img
+          src="@/assets/images/logo/DRK-logo.svg"
+          alt="Dronninglund Kunstcenter Logo"
+        />
+      </div>
+      <div class="buttons">
+        <button class="language-button">DA</button>
+        <button class="ticket-button">Køb billet</button>
+      </div>
+    </div>
+
+    <div class="divider-hr"></div>
+
+    <nav class="bottom-section">
+      <div class="nav-container">
+        <div class="nav-list-left">
+          <a href="/">Forside</a>
+          <a href="/udstillinger">Udstillinger</a>
+          <a href="/begivenheder">Begivenheder</a>
+        </div>
+        <div class="divider-vr"></div>
+        <div class="nav-list-right">
+          <a href="/se-mere">Se mere</a>
+        </div>
+      </div>
+    </nav>
+  </header>
   </template>
   
   <script setup>

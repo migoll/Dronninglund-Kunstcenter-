@@ -2,14 +2,12 @@
   <div>
     <TheHeader />
     <router-view />
+    <TheFooter />
   </div>
-
 </template>
-<script setup>
 
+<script setup>
+import TheFooter from "./components/the-footer.vue";
 </script>
-<style>
-  body {
-    margin: 0;
-  }
-</style>
+
+<style></style>
