@@ -32,10 +32,9 @@
       </div>
     </nav>
   </header>
-  </template>
-  
-  <script setup>
-  </script>
+</template>
+
+<script setup></script>
 
 <style scoped>
 .header {
