@@ -2,25 +2,46 @@
   <header class="header">
     <div class="top-section">
       <div class="search">
-        <img
-          src="../assets/icons/magnifying-glass-solid.svg"
-          alt="Search Icon"
-        />
+        <img src="~assets/icons/magnifying-glass-solid.svg" alt="Search Icon" />
       </div>
       <div class="logo">
-        <img
-          src="../assets/images/logo/DRK-logo.svg"
-          alt="Dronninglund Kunstcenter Logo"
-        />
+        <NuxtLink to="/">
+          <img
+            src="~assets/images/logo/DRK-logo.svg"
+            alt="Dronninglund Kunstcenter Logo"
+          />
+        </NuxtLink>
+      </div>
+      <div class="dropdown top-burger">
+        <div class="dropdown-trigger">
+          <img
+            src="~assets/icons/bars-solid.svg"
+            alt="Burger Menu Icon"
+            class="burger-menu"
+          />
+        </div>
+        <ul class="dropdown-menu">
+          <li><NuxtLink to="/">Forside</NuxtLink></li>
+          <li><NuxtLink to="/udstillinger">Udstillinger</NuxtLink></li>
+          <li><NuxtLink to="/begivenheder">Begivenheder</NuxtLink></li>
+          <li>
+            <NuxtLink to="/praktisk-information">Praktisk Information</NuxtLink>
+          </li>
+          <li><NuxtLink to="/billetter">Billetter</NuxtLink></li>
+          <li><NuxtLink to="/faciliteter">Faciliteter</NuxtLink></li>
+          <li><NuxtLink to="/om-os">Om os</NuxtLink></li>
+          <li><NuxtLink to="/kontakt">Kontakt</NuxtLink></li>
+          <li class="dropdown-language">
+            <button class="language-button">DA</button>
+          </li>
+        </ul>
       </div>
       <div class="buttons">
         <button class="language-button">DA</button>
         <button class="ticket-button">Køb billet</button>
       </div>
     </div>
-
     <div class="divider-hr"></div>
-
     <nav class="bottom-section">
       <div class="nav-container">
         <div class="nav-list-left">
@@ -29,7 +50,7 @@
           <NuxtLink to="/begivenheder">Begivenheder</NuxtLink>
         </div>
         <div class="divider-vr"></div>
-        <div class="nav-list-right dropdown">
+        <div class="nav-list-right dropdown bottom-burger">
           <div class="dropdown-trigger">
             <img
               src="~assets/icons/bars-solid.svg"
@@ -38,20 +59,20 @@
             />
           </div>
           <ul class="dropdown-menu">
+            <li><NuxtLink to="/">Forside</NuxtLink></li>
+            <li><NuxtLink to="/udstillinger">Udstillinger</NuxtLink></li>
+            <li><NuxtLink to="/begivenheder">Begivenheder</NuxtLink></li>
             <li>
               <NuxtLink to="/praktisk-information"
                 >Praktisk Information</NuxtLink
               >
             </li>
             <li><NuxtLink to="/billetter">Billetter</NuxtLink></li>
-            <li>
-              <NuxtLink to="/faciliteter">Faciliteter</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/om-os">Om os</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/kontakt">Kontakt</NuxtLink>
+            <li><NuxtLink to="/faciliteter">Faciliteter</NuxtLink></li>
+            <li><NuxtLink to="/om-os">Om os</NuxtLink></li>
+            <li><NuxtLink to="/kontakt">Kontakt</NuxtLink></li>
+            <li class="dropdown-language">
+              <button class="language-button">DA</button>
             </li>
           </ul>
         </div>
@@ -59,9 +80,7 @@
     </nav>
   </header>
 </template>
-
 <script setup></script>
-
 <style scoped>
 .header {
   background-color: #000000;
@@ -75,6 +94,7 @@
   padding: 1rem 2rem;
   max-width: 1080px;
   margin: 0 auto;
+  position: relative;
 }
 
 .bottom-section {
@@ -111,6 +131,14 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.burger-menu-wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
 }
 
 .divider-hr {
@@ -161,8 +189,8 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: -50%;
+  right: 0;
   display: none;
   background-color: #000000;
   border: 3px solid #ffffff;
@@ -171,7 +199,6 @@
   list-style: none;
   min-width: 150px;
   z-index: 10;
-  margin-top: -25px; /* Ensures no gap between trigger and dropdown */
 }
 
 .dropdown-menu li {
@@ -187,12 +214,45 @@
   background-color: #1a1a1a;
 }
 
+.dropdown-menu .dropdown-language {
+  padding: 8px 16px;
+}
+
 .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.dropdown-trigger:hover + .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
+@media (max-width: 768px) {
+  .bottom-section {
+    display: none;
+  }
+
+  .buttons {
+    display: none;
+  }
+
+  .top-burger {
+    display: block;
+    justify-self: end;
+  }
+
+  .top-section {
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+
+  .search {
+    justify-self: start;
+  }
+}
+
+@media (min-width: 769px) {
+  .top-burger {
+    display: none;
+  }
+
+  .bottom-burger {
+    display: block;
+  }
 }
 </style>
