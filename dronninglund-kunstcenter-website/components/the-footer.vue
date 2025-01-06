@@ -6,18 +6,36 @@
         <p>9330 DRONNINGLUND</p>
         <p>TLF. 9647 6600</p>
         <div class="social-icons">
-          <!-- <img src="@/assets/icons/facebook-icon.svg" alt="Facebook" /> -->
-          <!-- <img src="@/assets/icons/instagram-icon.svg" alt="Instagram" /> -->
-          <p>FB</p>
-          <p>FB</p>
+          <a
+            href="https://www.instagram.com/dronninglundkunstcenter/"
+            target="_blank"
+          >
+            <img
+              class="search-icon"
+              src="~assets/icons/instagram-brands-solid.svg"
+              alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://www.facebook.com/DrlundKunstcenter/?locale=da_DK"
+            target="_blank"
+          >
+            <img
+              class="search-icon"
+              src="~assets/icons/square-facebook-brands-solid.svg"
+              alt="Facebook"
+            />
+          </a>
         </div>
       </div>
 
       <div class="footer-logo">
-        <img
-          src="@/assets/images/logo/DRK-logo.svg"
-          alt="Dronninglund Kunstcenter Logo"
-        />
+        <NuxtLink to="/">
+          <img
+            src="~assets/images/logo/DRK-logo.svg"
+            alt="Dronninglund Kunstcenter Logo"
+          />
+        </NuxtLink>
       </div>
 
       <div class="footer-login">
@@ -60,8 +78,8 @@
 }
 
 .social-icons img {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
 }
 
 .footer-logo {
