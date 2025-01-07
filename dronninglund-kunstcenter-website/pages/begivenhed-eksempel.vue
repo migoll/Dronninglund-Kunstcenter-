@@ -27,6 +27,9 @@
             <p v-if="post.acf.participant3">{{ post.acf.participant3 }}</p>
             <p v-if="post.acf.participant4">{{ post.acf.participant4 }}</p>
             <p v-if="post.acf.participant5">{{ post.acf.participant5 }}</p>
+            <div class="med-flere">
+              <p>m.fl.</p>
+            </div>
             </div>
             </div>
             </div>
@@ -91,22 +94,25 @@ export default {
     color: white;
     padding-bottom: 3rem;
     font-size: 2rem;
-    margin: 3rem 120px;
+    margin: 3rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    word-break: break-word;
   }
 
   .udstilling-landing-page img {
     width: 100%;
     max-width: 300px;
-    margin: 0 20px;
+    margin: 0 2rem;
   }
 
   .udstilling-information {
-    margin: 3rem 20px;
+    padding: 0 2rem;
     line-height: 1.5;
+    max-width: 1080px;
+    margin: 3rem auto;
   }
 
   .udstilling-information h2 {
@@ -162,6 +168,10 @@ export default {
 
 .medvirkende-navne.open p {
     font-size: 1rem;
+}
+
+.med-flere {
+  text-decoration: underline;
 }
   
   .image-gallery-udstilling {
