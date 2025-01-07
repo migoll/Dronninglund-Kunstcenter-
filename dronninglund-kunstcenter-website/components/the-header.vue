@@ -38,7 +38,7 @@
       </div>
       <div class="buttons">
         <button class="language-button">DA</button>
-        <button class="ticket-button">Køb billet</button>
+        <NuxtLink to="/billetter" class="ticket-button">Køb billet</NuxtLink>
       </div>
     </div>
     <div class="divider-hr"></div>
@@ -136,6 +136,7 @@
 .ticket-button {
   background-color: var(--secondary-main);
   color: var(--primary-white);
+  text-decoration: none;
 }
 
 .burger-menu-wrapper {
@@ -251,7 +252,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .top-burger {
     display: none;
   }
