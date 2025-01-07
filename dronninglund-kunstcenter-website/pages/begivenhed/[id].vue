@@ -34,14 +34,6 @@
               </div>
             </div>
           </div>
-
-          <div class="image-gallery-udstilling-container">
-            <div class="center-section">
-            <div class="image-gallery-udstilling">
-            <img v-for="(image, index) in galleryImages" :key="index" :src="image.url" alt="">
-            </div>
-            </div>
-          </div>
         </div>
       </div>
       <!-- Show a message if no post found -->
@@ -68,7 +60,7 @@ export default {
     },
     async fetchPosts() {
       try {
-        const response = await fetch('https://dronninglund-kunstcenter.laustsen.info/wp-json/wp/v2/posts?categories=5');
+        const response = await fetch('https://dronninglund-kunstcenter.laustsen.info/wp-json/wp/v2/posts?categories=4');
         const data = await response.json();
         this.posts = data;
 
