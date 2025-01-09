@@ -105,19 +105,48 @@
         begivenheder, udstillinger og unikke tilbud.
       </p>
       <div class="tilmeld-container">
-        <input
-          type="email"
-          placeholder="john_doe@mail.com"
-          class="email-input"
-        />
-        <button class="tilmeld-button">Tilmeld</button>
-      </div>
+    <input
+      v-if="!emailSent"
+      v-model="email"
+      type="email"
+      placeholder="john_doe@mail.com"
+      class="email-input"
+    />
+    <button
+      v-if="!emailSent"
+      @click="tilmeld"
+      class="tilmeld-button"
+    >
+      Tilmeld
+    </button>
+    <p v-if="emailSent" class="confirmation-message">
+      Tak for din registrering! Det betyder meget for os.
+    </p>
+  </div>
     </div>
   </section>
   <div class="divider-hr"></div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  data() {
+    return {
+      email: '',
+      emailSent: false,
+    };
+  },
+  methods: {
+    tilmeld() {
+      if (this.email.includes('@')) {
+        this.emailSent = true;
+      } else {
+        alert('Indtast venligst en gyldig emailadresse.');
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .forside-hero {
@@ -260,8 +289,18 @@
   margin-top: -88px;
   z-index: 999;
   position: absolute;
-  right: 0;
+  right: -100%;
   left: auto;
+  animation: slideInBoks 2s forwards ease-in-out;
+}
+
+@keyframes slideInBoks {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 .åbningstider-box li {
