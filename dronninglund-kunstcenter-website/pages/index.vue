@@ -88,15 +88,31 @@
     />
   </section>
   <section class="forside-sponsors center-section">
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-    <img src="" alt="" />
-  </section>
+  <div class="kompetencer-logoer-container">
+    <div class="kompetence-logoer">
+      <div class="logos-slide">
+        <img src="~assets/images/DLK-sponsors/Rectangle71.png" alt="Logo for sponsor 1" />
+        <img src="~assets/images/DLK-sponsors/Rectangle72.png" alt="Logo for sponsor 2" />
+        <img src="~assets/images/DLK-sponsors/Rectangle73.png" alt="Logo for sponsor 3" />
+        <img src="~assets/images/DLK-sponsors/Rectangle74.png" alt="Logo for sponsor 4" />
+        <img src="~assets/images/DLK-sponsors/Rectangle75.png" alt="Logo for sponsor 5" />
+        <img src="~assets/images/DLK-sponsors/Rectangle76.png" alt="Logo for sponsor 6" />
+        <img src="~assets/images/DLK-sponsors/Rectangle77.png" alt="Logo for sponsor 7" />
+        <img src="~assets/images/DLK-sponsors/Rectangle78.png" alt="Logo for sponsor 8" />
+      </div>
+      <div class="logos-slide">
+        <img src="~assets/images/DLK-sponsors/Rectangle71.png" alt="Logo for sponsor 1" />
+        <img src="~assets/images/DLK-sponsors/Rectangle72.png" alt="Logo for sponsor 2" />
+        <img src="~assets/images/DLK-sponsors/Rectangle73.png" alt="Logo for sponsor 3" />
+        <img src="~assets/images/DLK-sponsors/Rectangle74.png" alt="Logo for sponsor 4" />
+        <img src="~assets/images/DLK-sponsors/Rectangle75.png" alt="Logo for sponsor 5" />
+        <img src="~assets/images/DLK-sponsors/Rectangle76.png" alt="Logo for sponsor 6" />
+        <img src="~assets/images/DLK-sponsors/Rectangle77.png" alt="Logo for sponsor 7" />
+        <img src="~assets/images/DLK-sponsors/Rectangle78.png" alt="Logo for sponsor 8" />
+      </div>
+    </div>
+  </div>
+</section>
   <section class="forside-nyhedsbrev">
     <div class="forside-nyhedsbrev center-section">
       <h3>Vores Nyhedsbrev</h3>
@@ -109,7 +125,7 @@
       v-if="!emailSent"
       v-model="email"
       type="email"
-      placeholder="john_doe@mail.com"
+      placeholder="dronninglund@mail.com..."
       class="email-input"
     />
     <button
@@ -132,14 +148,17 @@
 export default {
   data() {
     return {
-      email: '',
-      emailSent: false,
+      email: '', // Tom string der der holder brugerens indtastede mail
+      emailSent: false, // BOolean der holder styr på om emailen er blevet sendt
     };
   },
   methods: {
     tilmeld() {
+      // Tjekker om mailen indeholder "@"
       if (this.email.includes('@')) {
+        // Hvis mailen er gyldig, bliver emailSent true
         this.emailSent = true;
+        //ellers vises error
       } else {
         alert('Indtast venligst en gyldig emailadresse.');
       }
@@ -265,7 +284,6 @@ export default {
   flex-grow: 1;
   object-fit: contain;
   max-height: 200px;
-  max-width: 100%;
   padding-block: 2rem;
 }
 
@@ -440,4 +458,37 @@ export default {
     padding-block: 3rem;
   }
 }
+
+.kompetence-logoer-container {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.kompetence-logoer {
+    overflow: hidden;
+    padding: 60px 0;
+    white-space: nowrap;
+    margin-top: 2rem;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 40s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 100px;
+    margin: 0 50px;
+}
+
+
 </style>
